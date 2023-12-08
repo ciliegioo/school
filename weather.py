@@ -9,12 +9,16 @@ st.set_page_config(
     page_icon='✨'
 )
 
-st.title('날씨 데이터 시각화')
+st.title('날씨 데이터 시각화⛅')
+st.markdown('**대구강동고 소인수 20224 조은경**')
 
 api_key = "8c8dac1c764bc38338e66379dfb82ae8"
 
 # 사이트 내의 어느 도시든 가능!^^
-city = st.text_input('Enter City', 'Daegu')
+st.markdown("""---""")
+city = st.text_input('도시명을 입력하세요', 'Daegu')
+st.markdown('*⚠️  OpenWeather에 없는 도시일 경우 그래프가 나타나지 않을 수도 있습니다*')
+st.markdown("""---""")
 
 url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}"
 
@@ -26,12 +30,10 @@ df = pd.DataFrame({
     'Temperature (Celsius)': [entry['main']['temp'] - 273.15 for entry in data['list']],
 })
 
-visualization_option = st.radio('Select Visualization Option', [
-                                'Line Chart', 'Bar Chart'])
+tab1, tab2 = st.tabs(["선 그래프", "막대 그래프"])
 
-if visualization_option == 'Line Chart':
+with tab1:
     st.line_chart(df.set_index('Date'))
-else:
-    st.bar_chart(df.set_index('Date'))
 
-st.text('대구강동고 소인수 20224 조은경')
+with tab2:
+    st.bar_chart(df.set_index('Date'))
