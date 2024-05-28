@@ -3,6 +3,7 @@ import os
 import numpy as np
 import collections
 import math
+from PIL import Image
 
 # @@@@@@@@@
 # One Time Pad 암호화 함수
@@ -79,7 +80,8 @@ if menu == 'Introduction':
         st.write("")
         img = Image.open('image2.png')
         st.image(img)
-	    st.write("")
+	
+	st.write("")
         st.write("**대칭키 암호화(암호화 알고리즘의 종류) :**")
         st.write("평문을 특정 대칭키로 암호화하고, 결과로 나온 암호문도 대칭키로 복호화할 수 있는 방식")
         st.write("")
