@@ -77,10 +77,11 @@ if menu == 'Introduction':
         st.header('암호화 알고리즘')
         st.write('데이터의 무결성 및 기밀성을 확보하기위해 정보를 쉽게 해독할 수 없도록 암호화하는 알고리즘')
         st.write("")
-
+        img = Image.open('image2.png')
+        st.image(img)
+	    st.write("")
         st.write("**대칭키 암호화(암호화 알고리즘의 종류) :**")
         st.write("평문을 특정 대칭키로 암호화하고, 결과로 나온 암호문도 대칭키로 복호화할 수 있는 방식")
-        st.write("종류 : AES128, AES256, SEED 등")
         st.write("")
 
         st.text("*평문 : 해독 가능한 형태의 메세지 (암호화 전)")
