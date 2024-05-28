@@ -89,7 +89,7 @@ if menu == 'Introduction':
 
     with tab2:
         st.header('원타임패드 알고리즘')
-        st.write("평문과 같은 길이의 무작위 배열 문자열(패드)를 만들어서 평문에 더하는 방식")
+        st.write("평문과 같은 길이의 무작위 배열 문자열(패드)를 만들어서 평문에 더하는 방식 (대칭키 암호화)")
         st.markdown(
             "송신자가 평문과 패드를 XOR 연산하여 메세지 전송 → 수신자가 받은 메세지와 패드를 XOR 연산하여 평문 얻음 (XOR 연산의 'A XOR B = C → A XOR C = B, B XOR C = A' 특성 이용)")
         st.write("")
