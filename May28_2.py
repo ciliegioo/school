@@ -140,6 +140,11 @@ else:
     st.bar_chart(data=probabilities)
 
     st.subheader(":gray[설명]", divider='gray')
+    st.write("X축 : 문자의 개수 ")
+    st.write("Y축 :  암호화된 암호문에서 각 문자의 확률 밀도")
+    st.write("    쉽게 말해 '암호화된' 암호문에서 각 문자가 나타날 확률")
+    st.write("그래프는 모든 시뮬레이션에 대한 문자의 평균 분포를 나타냄")
+    st.write("")
     st.write("Q. 왜 x축 값이 127개일까?")
     st.text("아스키(컴퓨터의 문자 인코딩)는 총 128개")
     st.text("그중 0(널 문자)를 제외하면 사용가능한 문자의 개수는 127개")
